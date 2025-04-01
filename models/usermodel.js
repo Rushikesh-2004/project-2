@@ -5,7 +5,6 @@ const crypto = require('crypto');
 const userSchema = new mongoose.Schema({
     email: {
         type: String,
-        required:true,
         unique: true, 
         sparse: true, 
         trim: true, 
@@ -32,7 +31,7 @@ const userSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true,
-        minlength: 15
+        minlength: 6
     },
     resetPasswordToken: String, 
     resetPasswordExpires: Date,
